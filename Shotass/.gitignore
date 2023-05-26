@@ -58,6 +58,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-#ignore Assets/Tidal Flask
-/Assets/Tidal Flask - FANTASTIC Battle Pack/
-```
+#ignore Assets/Tidal Flask all files except for .meta files
+Assets/Tidal Flask/*
+!Assets/Tidal Flask/*.meta
