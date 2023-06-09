@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13acf985-afda-442f-be09-37e5c15ce6b6" name="Changes" comment="" />
+    <list default="true" id="13acf985-afda-442f-be09-37e5c15ce6b6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Shotass/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Shotass/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Terrain.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Terrain.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XR Toolkit/XR/Settings/Open XR Package Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR Toolkit/XR/Settings/Open XR Package Settings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,6 +59,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "terrain",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -123,6 +129,7 @@
       <workItem from="1686211035656" duration="3451000" />
       <workItem from="1686227748243" duration="2223000" />
       <workItem from="1686236451282" duration="3669000" />
+      <workItem from="1686302826941" duration="1675000" />
     </task>
     <task id="LOCAL-00001" summary="Create Prefabs, Add Interactions, scripts">
       <created>1686217180950</created>
