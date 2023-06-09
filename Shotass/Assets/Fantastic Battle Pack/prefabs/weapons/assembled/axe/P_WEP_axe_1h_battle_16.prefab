@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6658167024679665347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6658167024679665340}
+  m_Layer: 0
+  m_Name: P_WEP_axe_1h_battle_16
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6658167024679665340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6658167024679665347}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 636991492414399070}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &6658167023578193520
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 875722379269885610}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4114e0df1d2128b4fa7d34ad5018c678,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4114e0df1d2128b4fa7d34ad5018c678,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4114e0df1d2128b4fa7d34ad5018c678,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4114e0df1d2128b4fa7d34ad5018c678,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4114e0df1d2128b4fa7d34ad5018c678,
+        type: 3}
+      propertyPath: m_Name
+      value: SM_WEP_head_axe_battle_28
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4114e0df1d2128b4fa7d34ad5018c678, type: 3}
+--- !u!1001 &6658167024420057724
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6658167024679665340}
+    m_Modifications:
+    - target: {fileID: 6102803843463548962, guid: 31f9ce37fb0c14f43b1f10fcccdac840,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102803843463548962, guid: 31f9ce37fb0c14f43b1f10fcccdac840,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102803843463548962, guid: 31f9ce37fb0c14f43b1f10fcccdac840,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102803843463548962, guid: 31f9ce37fb0c14f43b1f10fcccdac840,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102803843463548962, guid: 31f9ce37fb0c14f43b1f10fcccdac840,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102803843463548962, guid: 31f9ce37fb0c14f43b1f10fcccdac840,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102803843463548962, guid: 31f9ce37fb0c14f43b1f10fcccdac840,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102803843463548962, guid: 31f9ce37fb0c14f43b1f10fcccdac840,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102803843463548962, guid: 31f9ce37fb0c14f43b1f10fcccdac840,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102803843463548962, guid: 31f9ce37fb0c14f43b1f10fcccdac840,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6102803843463548962, guid: 31f9ce37fb0c14f43b1f10fcccdac840,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204625740144101495, guid: 31f9ce37fb0c14f43b1f10fcccdac840,
+        type: 3}
+      propertyPath: m_Name
+      value: P_WEP_hilt_1h_battle_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31f9ce37fb0c14f43b1f10fcccdac840, type: 3}
+--- !u!4 &636991492414399070 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6102803843463548962, guid: 31f9ce37fb0c14f43b1f10fcccdac840,
+    type: 3}
+  m_PrefabInstance: {fileID: 6658167024420057724}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &875722379269885610 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5783113939642170582, guid: 31f9ce37fb0c14f43b1f10fcccdac840,
+    type: 3}
+  m_PrefabInstance: {fileID: 6658167024420057724}
+  m_PrefabAsset: {fileID: 0}
