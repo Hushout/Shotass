@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2894798551656917522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1558438227345414073}
+  m_Layer: 0
+  m_Name: P_WEP_sword_battle_09
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1558438227345414073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2894798551656917522}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2632061364847861974}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3451103898607355049
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1558438227345414073}
+    m_Modifications:
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047318856869114401, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_Name
+      value: P_WEP_hilt_1h_battle_09
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d1ed222f1bd817947817bb7a0c8c29c7, type: 3}
+--- !u!4 &2632061364847861974 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 3451103898607355049}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5171895004210827746 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7503713503139566923, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 3451103898607355049}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4252871957013642780
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5171895004210827746}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 24ec9e6e607c7a644bcea725eafd111e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 24ec9e6e607c7a644bcea725eafd111e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 24ec9e6e607c7a644bcea725eafd111e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 24ec9e6e607c7a644bcea725eafd111e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 24ec9e6e607c7a644bcea725eafd111e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 24ec9e6e607c7a644bcea725eafd111e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 24ec9e6e607c7a644bcea725eafd111e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 24ec9e6e607c7a644bcea725eafd111e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 24ec9e6e607c7a644bcea725eafd111e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 24ec9e6e607c7a644bcea725eafd111e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 24ec9e6e607c7a644bcea725eafd111e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 24ec9e6e607c7a644bcea725eafd111e,
+        type: 3}
+      propertyPath: m_Name
+      value: SM_WEP_head_sword_battle_09
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 24ec9e6e607c7a644bcea725eafd111e, type: 3}

@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class SceneLoader : MonoBehaviour
 {
+    private GameObject _mySceptre;
     // Start is called before the first frame update
     void Start()
     {
-        var myGem = GameObject.FindGameObjectWithTag("MyGem").GetComponent<Gem>();
-        var mySceptre = GameObject.FindGameObjectWithTag("MySceptre").GetComponent<Sceptre>();
-        mySceptre.AttachGem(myGem);
+        _mySceptre = GameObject.FindGameObjectWithTag("MySceptre");
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Each 5 seconds
+        if (Time.frameCount % 300 == 0)
+        {
+            _mySceptre.GetComponent<Sceptre>().CastSpell();
+        }
     }
 }

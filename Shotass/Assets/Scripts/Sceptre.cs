@@ -5,10 +5,6 @@ using UnityEngine;
 
 public class Sceptre : Weapon
 {
-    [SerializeField] 
-    private Gem _gem;
-    [SerializeField]
-    private Transform _gemOrigin;
     [SerializeField]
     private Transform _projectileOrigin;
     private GameObject _projectilePrefab;
@@ -28,20 +24,6 @@ public class Sceptre : Weapon
         {
             CastSpell();
         }
-    }
-    
-    public void AttachGem(Gem gem)
-    {
-        if (gem is null)
-        {
-            Debug.LogError("Gem can not be null");
-            return;
-        }
-        _gem = gem;
-        _gem.transform.SetParent(_gemOrigin);
-        _gem.transform.SetLocalPositionAndRotation(Vector3.zero, new Quaternion(0,0,0,0));
-        _gem.StartAnimation();
-
     }
 
     public GameObject CreateProjectile()

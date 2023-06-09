@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6529112705241258371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6529112705241258372}
+  m_Layer: 0
+  m_Name: P_WEP_hammer_1h_battle_09
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6529112705241258372
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6529112705241258371}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5908208150085864489}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &6529112705761019138
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3656530120111062301}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 380e5f3eae29b85409a5f577ca719904,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 380e5f3eae29b85409a5f577ca719904,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 380e5f3eae29b85409a5f577ca719904,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 380e5f3eae29b85409a5f577ca719904,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 380e5f3eae29b85409a5f577ca719904,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 380e5f3eae29b85409a5f577ca719904,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 380e5f3eae29b85409a5f577ca719904,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 380e5f3eae29b85409a5f577ca719904,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 380e5f3eae29b85409a5f577ca719904,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 380e5f3eae29b85409a5f577ca719904,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 380e5f3eae29b85409a5f577ca719904,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 380e5f3eae29b85409a5f577ca719904,
+        type: 3}
+      propertyPath: m_Name
+      value: SM_WEP_head_hammer_battle_09
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 380e5f3eae29b85409a5f577ca719904, type: 3}
+--- !u!1001 &6529112706162878550
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6529112705241258372}
+    m_Modifications:
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8047318856869114401, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+        type: 3}
+      propertyPath: m_Name
+      value: P_WEP_hilt_1h_battle_09
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d1ed222f1bd817947817bb7a0c8c29c7, type: 3}
+--- !u!4 &5908208150085864489 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 820285614887560319, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 6529112706162878550}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3656530120111062301 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7503713503139566923, guid: d1ed222f1bd817947817bb7a0c8c29c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 6529112706162878550}
+  m_PrefabAsset: {fileID: 0}
