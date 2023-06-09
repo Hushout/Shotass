@@ -789,11 +789,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 1084d1ef-34f4-4466-8102-ef84c46421bc
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: Shotass
+  organizationId: nevav84
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
