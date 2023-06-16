@@ -4,16 +4,14 @@ using System.Collections.Generic;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class LobbyUI: MonoBehaviour
+public class LobbyList : MonoBehaviour
 {
-    public static LobbyUI Instance { get; private set; }
+    public static LobbyList Instance { get; private set; }
 
     [SerializeField] private Transform lobbySingleTemplate;
+    [SerializeField] private Button createLobbyButton;
     [SerializeField] private Transform container;
     [SerializeField] private Button refreshButton;
-    [SerializeField] private Button createLobbyButton;
-
 
 
     private void Awake()
@@ -23,7 +21,7 @@ public class LobbyUI: MonoBehaviour
         lobbySingleTemplate.gameObject.SetActive(false);
 
         refreshButton.onClick.AddListener(RefreshButtonClick);
-
+        createLobbyButton.onClick.AddListener(CreateLobbyButtonClick);
     }
 
     private void Start()
@@ -66,14 +64,19 @@ public class LobbyUI: MonoBehaviour
         {
             Transform lobbySingleTransform = Instantiate(lobbySingleTemplate, container);
             lobbySingleTransform.gameObject.SetActive(true);
-            LobbyListSingleUI lobbyListSingleUI = lobbySingleTransform.GetComponent<LobbyListSingleUI>();
-            lobbyListSingleUI.UpdateLobby(lobby);
+            LobbyListElement lobbyListElement = lobbySingleTransform.GetComponent<LobbyListElement>();
+            lobbyListElement.UpdateLobby(lobby);
         }
     }
 
     private void RefreshButtonClick()
     {
         LobbyManager.Instance.RefreshLobbyList();
+    }
+
+    private void CreateLobbyButtonClick()
+    {
+        LobbyManager.Instance.CreateLobby("Lobby Name");
     }
 
     private void Hide()

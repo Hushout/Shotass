@@ -9,7 +9,6 @@ using UnityEngine;
 
 public class LobbyManager : MonoBehaviour
 {
-
     public static LobbyManager Instance { get; private set; }
 
 
@@ -20,7 +19,6 @@ public class LobbyManager : MonoBehaviour
     public event EventHandler<LobbyEventArgs> OnJoinedLobby;
     public event EventHandler<LobbyEventArgs> OnJoinedLobbyUpdate;
     public event EventHandler<LobbyEventArgs> OnKickedFromLobby;
-    public event EventHandler<LobbyEventArgs> OnLobbyGameModeChanged;
     public class LobbyEventArgs : EventArgs
     {
         public Lobby lobby;
@@ -203,8 +201,9 @@ public class LobbyManager : MonoBehaviour
             };
 
             QueryResponse lobbyListQueryResponse = await Lobbies.Instance.QueryLobbiesAsync();
-
+        
             OnLobbyListChanged?.Invoke(this, new OnLobbyListChangedEventArgs { lobbyList = lobbyListQueryResponse.Results });
+        
         }
         catch (LobbyServiceException e)
         {

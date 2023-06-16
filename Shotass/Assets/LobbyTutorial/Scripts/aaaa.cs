@@ -54,9 +54,7 @@ public class aaa : MonoBehaviour {
     private string playerName;
 
 
-    private void Awake() {
-        Instance = this;
-    }
+  
 
     private void Update() {
         //HandleRefreshLobbyList(); // Disabled Auto Refresh for testing with multiple builds

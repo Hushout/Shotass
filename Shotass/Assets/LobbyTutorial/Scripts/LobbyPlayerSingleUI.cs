@@ -16,20 +16,10 @@ public class LobbyPlayerSingleUI : MonoBehaviour {
     private Player player;
 
 
-    private void Awake() {
-        kickPlayerButton.onClick.AddListener(KickPlayer);
-    }
-
-    public void SetKickPlayerButtonVisible(bool visible) {
-        kickPlayerButton.gameObject.SetActive(visible);
-    }
 
     public void UpdatePlayer(Player player) {
         this.player = player;
         playerNameText.text = player.Data[LobbyManager.KEY_PLAYER_NAME].Value;
-        LobbyManager.PlayerCharacter playerCharacter = 
-            System.Enum.Parse<LobbyManager.PlayerCharacter>(player.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value);
-        characterImage.sprite = LobbyAssets.Instance.GetSprite(playerCharacter);
     }
 
     private void KickPlayer() {
