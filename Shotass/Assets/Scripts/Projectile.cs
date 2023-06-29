@@ -6,9 +6,9 @@ using UnityEngine;
 public class Projectile: MonoBehaviour
 {
     [SerializeField]
-    private double _speed = 10;
+    private double _speed = 0.01;
 
-    private double _damage;
+    private double _damage = 10;
 
     void Start()
     {
@@ -55,6 +55,13 @@ public class Projectile: MonoBehaviour
         }
         //Destroy the projectile
         Destroy(this.gameObject);
+    }
+
+    public void Launch(Transform origin)
+    {
+        this.transform.position = origin.position;
+        this.GetComponent<Rigidbody>().velocity = origin.forward * (float)_speed;
+        Destroy(this, 60);
     }
     
     
