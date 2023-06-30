@@ -22,7 +22,6 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Update HealthBar");
         UpdateDisplay();
     }
 
@@ -43,7 +42,6 @@ public class HealthBar : MonoBehaviour
     public void UpdateDisplay()
     {
         float lifeWidth = (life * maxWidth) / 100;
-        Debug.Log(lifeWidth);
         var sizeDelta = lifeBar.GetComponentInParent<RectTransform>().sizeDelta;
         lifeBar.GetComponentInParent<RectTransform>().sizeDelta = new Vector2(lifeWidth, sizeDelta.y);
     }

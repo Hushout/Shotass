@@ -24,7 +24,10 @@ public class SpellSpawner : MonoBehaviour
     public void Fire()
     {
         var projectileGameObject = Instantiate(_projectilePrefab, spawnObject.transform.position, Quaternion.identity);
-        projectileGameObject.GetComponent<Projectile>().Launch(spawnObject.transform);
+        var projectile = projectileGameObject.GetComponent<Projectile>();
+        projectile.SetDamage(100f);
+        projectile.Launch(spawnObject.transform);
+        
     }
     
     // Coroutine to fire every 5 seconds
