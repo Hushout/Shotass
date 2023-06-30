@@ -1,9 +1,16 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 4aecb92fff08436c8303b10eab8da368
 folderAsset: yes
 timeCreated: 1441876950
 licenseType: Pro
 DefaultImporter:
+=======
+guid: 792447bf24e39264ab5898312e049ad7
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+>>>>>>> grabcrystal
   userData: 
   assetBundleName: 
   assetBundleVariant: 
