@@ -22,7 +22,6 @@ public class Target : MonoBehaviour
     
     public void TakeDamage(double damage)
     {
-        Debug.Log($"Target took {damage} damage");
         _health -= damage;
         healthBar.UpdateHealth((float)_health);
         if (_health <= 0)
@@ -34,5 +33,16 @@ public class Target : MonoBehaviour
     void Die()
     {
         Destroy(this.gameObject);
+        OnDie?.Invoke();
     }
+
+    public bool IsDead()
+    {
+        return _health <= 0;
+    }
+    
+    //OnDie
+    public delegate void OnDieDelegate();
+    
+    public event OnDieDelegate OnDie;
 }
