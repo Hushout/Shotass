@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Shotass/Assets/Resources/Models/Bullet.meta
 fileFormatVersion: 2
 guid: c12dc63fca4f9414daccd00286c2338e
 folderAsset: yes
@@ -6,3 +7,13 @@ DefaultImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+=======
+fileFormatVersion: 2
+guid: 7d6776cdd0f2ef24497fa83d1777c473
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+>>>>>>> develop:Shotass/Assets/Scipts.meta

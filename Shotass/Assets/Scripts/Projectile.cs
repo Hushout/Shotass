@@ -6,9 +6,9 @@ using UnityEngine;
 public class Projectile: MonoBehaviour
 {
     [SerializeField]
-    private double _speed = 10;
+    private double _speed = 0.01;
 
-    private double _damage;
+    private double _damage = 10;
 
     void Start()
     {
@@ -23,19 +23,19 @@ public class Projectile: MonoBehaviour
     
     public void SetDamage(double damage)
     {
-        Debug.Log($"Projectile damage: {damage}");
+        VRDebug.Log($"Projectile damage: {damage}");
         _damage = damage;
     }
     
     public void SetSpeed(double speed)
     {
-        Debug.Log($"Projectile speed: {speed}");
+        VRDebug.Log($"Projectile speed: {speed}");
         _speed = speed;
     }
     
     public void Launch()
     {
-        Debug.Log("Projectile launched");
+        VRDebug.Log("Projectile launched");
         //Get gameobject
         var rigidbody = GetComponent<Rigidbody>();
         rigidbody.AddForce(transform.forward * (float)_speed, ForceMode.Impulse);
@@ -44,7 +44,7 @@ public class Projectile: MonoBehaviour
     // ON collision
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log("Projectile collided");
+        VRDebug.Log("Projectile collided");
         // Get the enemy
         var target = other.gameObject.GetComponentInParent<Target>();
         // If enemy is not null
@@ -55,6 +55,13 @@ public class Projectile: MonoBehaviour
         }
         //Destroy the projectile
         Destroy(this.gameObject);
+    }
+
+    public void Launch(Transform origin)
+    {
+        this.transform.position = origin.position;
+        this.GetComponent<Rigidbody>().velocity = origin.forward * (float)_speed;
+        Destroy(this, 60);
     }
     
     

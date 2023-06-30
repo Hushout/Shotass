@@ -86,7 +86,7 @@ MonoBehaviour:
     type: 3}
   fireSpeed: 20
   chargeDuration: 10
-  maxBulletScale: 10
+  maxBulletScale: 41
 --- !u!54 &487105866648235662
 Rigidbody:
   m_ObjectHideFlags: 0
