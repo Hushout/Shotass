@@ -10,7 +10,7 @@ using UnityEngine;
 public class LobbyManager : MonoBehaviour
 {
     public static LobbyManager Instance { get; private set; }
-
+    // test
 
     public const string KEY_PLAYER_NAME = "PlayerName";
 
@@ -155,20 +155,27 @@ public class LobbyManager : MonoBehaviour
     private Player GetPlayer()
     {
         return new Player(AuthenticationService.Instance.PlayerId, null, new Dictionary<string, PlayerDataObject> {
-            { KEY_PLAYER_NAME, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Public, playerName) }
+            { "KEY_PLAYER_NAME", new PlayerDataObject(PlayerDataObject.VisibilityOptions.Public, playerName) }
         });
-    }
+    }   
 
     public async void CreateLobby(string lobbyName)
     {
         int maxPlayers = 2;
         Player player = GetPlayer();
 
+        string relayCode = await Relay.Instance.CreateRelay();
+
         CreateLobbyOptions options = new CreateLobbyOptions
         {
-            Player = player
+            Player = player,
+            Data = new Dictionary<string, DataObject>
+            {
+                { "KEY_RELAY_CODE", new DataObject(DataObject.VisibilityOptions.Public, relayCode ) }
+            }
         };
 
+        Destroy(GameObject.FindGameObjectWithTag("MenuPlayer"));
         Lobby lobby = await LobbyService.Instance.CreateLobbyAsync(lobbyName, maxPlayers, options);
 
         joinedLobby = lobby;
@@ -222,17 +229,24 @@ public class LobbyManager : MonoBehaviour
 
         joinedLobby = lobby;
 
+        /* Relay.Instance.JoinRelayWithCode(lobby.Data["KEY_RELAY_CODE"].Value); */
         OnJoinedLobby?.Invoke(this, new LobbyEventArgs { lobby = lobby });
     }
 
     public async void JoinLobby(Lobby lobby)
     {
+     
+        Debug.Log("want to join this: " + lobby.Data["KEY_RELAY_CODE"].Value);
+
         Player player = GetPlayer();
 
         joinedLobby = await LobbyService.Instance.JoinLobbyByIdAsync(lobby.Id, new JoinLobbyByIdOptions
         {
             Player = player
         });
+        Destroy(GameObject.FindGameObjectWithTag("MenuPlayer"));
+        Relay.Instance.JoinRelayWithCode(lobby.Data["KEY_RELAY_CODE"].Value);
+
 
         OnJoinedLobby?.Invoke(this, new LobbyEventArgs { lobby = lobby });
     }

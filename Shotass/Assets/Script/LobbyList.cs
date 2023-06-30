@@ -81,7 +81,7 @@ public class LobbyList : MonoBehaviour
 
     private void Hide()
     {
-        gameObject.SetActive(false);
+       // gameObject.SetActive(false);
     }
 
     private void Show()

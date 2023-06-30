@@ -23,7 +23,7 @@ public class LobbyListElement : MonoBehaviour
     private void Awake()
     {
         GetComponent<Button>().onClick.AddListener(() => {
-            Debug.Log("Join loby: " + lobby.Id);
+            Debug.Log("Join lobyId: " + lobby.Id);
             LobbyManager.Instance.JoinLobby(lobby);
         });
     }

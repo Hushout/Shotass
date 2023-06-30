@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
 using Unity.Networking.Transport.Relay;
@@ -11,10 +13,12 @@ using UnityEngine;
 
 public class Relay : MonoBehaviour
 {
+    public static Relay Instance;
+
     // Start is called before the first frame update
     private async void Start()
     {
-        await UnityServices.InitializeAsync();
+        await UnityServices.InitializeAsync();  
 
         AuthenticationService.Instance.SignedIn += () =>
         {
@@ -22,21 +26,28 @@ public class Relay : MonoBehaviour
         };
 
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
+        Instance = this;
     }
 
-    private async void CreateRelay()
+    public async Task<String> CreateRelay()
     {
-        try {
+        Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa");
+        try
+        {
             Allocation allocation = await RelayService.Instance.CreateAllocationAsync(3);
             string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
             Debug.Log("Join code " + joinCode);
 
-
             RelayServerData relayServerData = new RelayServerData(allocation, "dtls");
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
-        
-        }catch(System.Exception e){
+
+            NetworkManager.Singleton.StartHost();
+
+            return joinCode;
+
+        }catch(RelayServiceException e){
             Debug.Log("Allocation failed " + e.Message);
+            return null;
         }
     }
 
@@ -57,4 +68,22 @@ public class Relay : MonoBehaviour
         }
     }
 
+    public async void JoinRelayWithCode(String code)
+    {
+        Debug.Log("Join lobby code: " + code);
+        try
+        {
+            JoinAllocation joinAllocation = await RelayService.Instance.JoinAllocationAsync(code);
+            Debug.Log("Joined relay ");
+
+            RelayServerData relayServerData = new RelayServerData(joinAllocation, "dtls");
+
+            NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
+            NetworkManager.Singleton.StartClient();
+
+        }catch(System.Exception e)
+        {
+            Debug.Log("Join failed " + e.Message);
+        }
+    }
 }
