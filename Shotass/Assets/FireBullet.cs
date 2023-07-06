@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
-
 public class FireBullet : MonoBehaviour
 {
     public GameObject bullet;
@@ -13,12 +12,16 @@ public class FireBullet : MonoBehaviour
 
     private GameObject currentBullet;
     private Coroutine chargeCoroutine;
+    private bool crystal = false;
     // Start is called before the first frame update
     void Start()
     {
         XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
         grabbable.activated.AddListener(Charge);
         grabbable.deactivated.AddListener(Fire);
+        XRSocketInteractor slot = GetComponentInChildren<XRSocketInteractor>();
+        slot.selectEntered.AddListener(onCrytalSelect);
+        slot.selectExited.AddListener(offCrystalSelect);
     }
 
     // Update is called once per frame
@@ -32,8 +35,11 @@ public class FireBullet : MonoBehaviour
 
     public void Charge(ActivateEventArgs arg)
     {
-        currentBullet = Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
-        chargeCoroutine = StartCoroutine(GrowBullet());
+        if (crystal)
+        {
+            currentBullet = Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
+            chargeCoroutine = StartCoroutine(GrowBullet());
+        }
     }
 
     private IEnumerator GrowBullet()
@@ -56,15 +62,27 @@ public class FireBullet : MonoBehaviour
 
     public void Fire(DeactivateEventArgs arg)
     {
-        if (chargeCoroutine != null)
+        if (crystal)
         {
-            StopCoroutine(chargeCoroutine);
-            chargeCoroutine = null;
+            if (chargeCoroutine != null)
+            {
+                StopCoroutine(chargeCoroutine);
+                chargeCoroutine = null;
+            }
+            currentBullet.transform.position = spawnPoint.position;
+            currentBullet.GetComponent<Rigidbody>().velocity = -spawnPoint.right * fireSpeed;
+            Destroy(currentBullet, 60);
+            currentBullet = null;
         }
-        currentBullet.transform.position = spawnPoint.position;
-        currentBullet.GetComponent<Rigidbody>().velocity = -spawnPoint.right * fireSpeed;
-        Destroy(currentBullet, 60);
+    }
 
-        currentBullet = null;
+    public void onCrytalSelect(SelectEnterEventArgs arg)
+    {
+        crystal = true;
+    }
+
+    public void offCrystalSelect(SelectExitEventArgs arg)
+    {
+        crystal = false;
     }
 }
