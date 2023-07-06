@@ -10,6 +10,10 @@ public class Projectile: MonoBehaviour
 
     private double _damage = 10;
 
+    public GameObject fxImpact;
+
+    private Vector3 previousPosition;
+    private Vector3 currentPosition;
     void Start()
     {
         
@@ -18,6 +22,12 @@ public class Projectile: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Each 5 frame
+        if (Time.frameCount % 5 == 0)
+        {
+            previousPosition = currentPosition;
+            currentPosition = transform.position;
+        }
         
     }
     
@@ -52,6 +62,23 @@ public class Projectile: MonoBehaviour
         {
             // Call enemy take damage
             target.TakeDamage(_damage);
+            if (target.IsDead())
+            {
+                // Set continuous collision detection
+                target.gameObject.AddComponent<Rigidbody>();
+                target.gameObject.GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.Continuous;
+
+                // Get projectile direction
+                Vector3 currentDirection = (currentPosition-previousPosition).normalized;
+                // Give projectile force to target
+                target.gameObject.GetComponent<Rigidbody>().AddForce(currentDirection * (float)_speed, ForceMode.Impulse);
+                VRDebug.Log("ezijfioze");
+            }
+        }
+        else
+        {
+            var terrainFire = Instantiate(fxImpact, transform.position, Quaternion.identity);
+            Destroy(terrainFire, 5);
         }
         //Destroy the projectile
         Destroy(this.gameObject);

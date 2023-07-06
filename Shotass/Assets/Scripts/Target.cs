@@ -1,13 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 
 public class Target : MonoBehaviour
 {
     [SerializeField]
-    private double _health = 100;
-    [SerializeField]
     public HealthBar healthBar;
+    
+    [SerializeField]
+    private double _health = 100;
+    
+    [SerializeField]
+    private double _maxHealth = 100;
+
+    [SerializeField]
+    public GameObject fxCriticalFire;
+    [SerializeField]
+    public GameObject fxMediumFire;
+    [SerializeField]
+    public GameObject fxSoftFire;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +38,7 @@ public class Target : MonoBehaviour
     {
         _health -= damage;
         healthBar.UpdateHealth((float)_health);
+        ToggleFX();
         if (_health <= 0)
         {
             Die();
@@ -32,10 +47,31 @@ public class Target : MonoBehaviour
     
     void Die()
     {
-        Destroy(this.gameObject);
+        Destroy(this.gameObject, 5);
         OnDie?.Invoke();
     }
 
+    public void ToggleFX()
+    {
+        if (fxCriticalFire is null || fxMediumFire is null || fxSoftFire is null) return;
+        if (_health <= (_maxHealth / 3))
+        {
+            fxSoftFire.SetActive(true);
+            fxMediumFire.SetActive(true);
+            fxCriticalFire.SetActive(true);
+        } else if (_health <= (_maxHealth / 2))
+        {
+            fxSoftFire.SetActive(true);
+            fxMediumFire.SetActive(true);
+            fxCriticalFire.SetActive(false);
+        } else if (_health <= (_maxHealth - 1))
+        {
+            fxSoftFire.SetActive(true);
+            fxMediumFire.SetActive(false);
+            fxCriticalFire.SetActive(false);
+        }
+    }
+    
     public bool IsDead()
     {
         return _health <= 0;
