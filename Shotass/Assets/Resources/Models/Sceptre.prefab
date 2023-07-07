@@ -82,7 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 20
   _projectileOrigin: {fileID: 1880663640488788710}
-  _projectilePrefab: {fileID: 5959943095310576647, guid: ad6087dfbadad3c4ea0bc14937ef8617,
+  _projectilePrefab: {fileID: 5959943095310576647, guid: bb9ea31ba9b338441b9e1919c69fd744,
     type: 3}
   fireSpeed: 20
   chargeDuration: 10
