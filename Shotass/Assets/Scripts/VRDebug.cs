@@ -50,12 +50,10 @@ public class VRDebug : MonoBehaviour
             _textOutput = _textOutputGameObject.GetComponent<TextMeshProUGUI>();
             _textOutputOutBounds = _textOutputGameObjectOutBounds.GetComponent<TextMeshProUGUI>();
             VRDebug._instance = this;
-            controller = controllerGameObject.GetComponent<ActionBasedController>(); 
-            
+            InitController();
             VRDebug.Log("[VRDebug]: Is XR controller Game Object null : " + (controllerGameObject == null ? "yes" : "no"));
             VRDebug.Log("[VRDebug]: Is XR controller null : " + (controller == null ? "yes" : "no"));
             VRDebug.Log("[VRDebug]: Started");
-            controller.selectAction.action.performed += ctx => OnInputSelectPress();
             NextDisplayMode();
             NextDisplayMode();
         } catch (Exception e)
@@ -64,9 +62,14 @@ public class VRDebug : MonoBehaviour
         }
     }
 
+    public void InitController()
+    {
+        controller = controllerGameObject.GetComponent<ActionBasedController>();
+        controller.selectAction.action.performed += ctx => OnInputSelectPress();
+    }
+    
     public void OnInputSelectPress()
     {
-        VRDebug.Log("[VRDebug] : You pressed on Select action");
         NextDisplayMode();
     }
 
@@ -110,11 +113,6 @@ public class VRDebug : MonoBehaviour
 
     private void KeepTrackingBottom(TextMeshProUGUI textMeshPro)
     {
-        //if(textMeshPro == _textOutput && _textOutputGameObjectContainer.active == false)
-        //    return;
-        //if(textMeshPro == _textOutputOutBounds && _textOutputGameObjectOutBoundsContainer.active == false)
-        //    return;
-        
         if (textMeshPro.overflowMode == TextOverflowModes.Overflow)
         {
             RectTransform rectTransform = textMeshPro.rectTransform;
@@ -126,16 +124,6 @@ public class VRDebug : MonoBehaviour
                 float overflowAmount = contentHeight - textHeight;
                 Vector3 currentPosition = rectTransform.localPosition;
                 Vector3 targetPosition;
-                //if (textMeshPro == _textOutput)
-                //{
-                //    targetPosition = new Vector3(currentPosition.x, overflowAmount, currentPosition.z);
-                //    rectTransform.localPosition = targetPosition;
-                //}
-                //else if (textMeshPro == _textOutputOutBounds)
-                //{
-                //    targetPosition = new Vector3(-overflowAmount, currentPosition.y, currentPosition.z);
-                //    rectTransform.localPosition = targetPosition;
-                //}
                 targetPosition = new Vector3(currentPosition.x, overflowAmount, currentPosition.z);
                 rectTransform.localPosition = targetPosition;
             }

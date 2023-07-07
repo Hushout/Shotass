@@ -4,40 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13acf985-afda-442f-be09-37e5c15ce6b6" name="Changes" comment="eho">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpellSpawner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpellSpawner.cs.meta" afterDir="false" />
+    <list default="true" id="13acf985-afda-442f-be09-37e5c15ce6b6" name="Changes" comment="Fix prefabs after merge">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Shotass/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Shotass/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/Target.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Models/Target.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Models/TargetScarecrow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Models/TargetScarecrow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fantastic Battle Pack/prefabs/FX/M_FX_clouds_battle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fantastic Battle Pack/prefabs/FX/M_FX_clouds_battle.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayRound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayRound.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Terrain.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Terrain.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Target.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/Managed/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.CoreModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.CoreModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.TerrainModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.TerrainModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityEngine.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityLinkerToEditorData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/Managed/UnityLinkerToEditorData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Assembly-CSharp.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Assembly-CSharp.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Assembly-CSharp_CodeGen.c" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Assembly-CSharp_CodeGen.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCCFieldValuesTable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCCFieldValuesTable.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCCTypeValuesTable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCCTypeValuesTable.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCCalculateFieldValues1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCCalculateFieldValues1.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCCalculateTypeValues.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCCalculateTypeValues.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCCalculateTypeValues1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCCalculateTypeValues1.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCodeRegistration.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppCodeRegistration.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppGenericInstDefinitions.c" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppGenericInstDefinitions.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppGenericMethodDefinitions.c" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppGenericMethodDefinitions.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppInteropDataTable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppInteropDataTable.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppMetadataRegistration.c" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppMetadataRegistration.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppMetadataUsage.c" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppMetadataUsage.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppRgctxTable.c" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppRgctxTable.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppTypeDefinitions.c" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/Il2CppTypeDefinitions.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.CoreModule.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.CoreModule.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.CoreModule_CodeGen.c" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.CoreModule_CodeGen.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.TerrainModule.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Shotass_BackUpThisFolder_ButDontShipItWithYourGame/il2cppOutput/UnityEngine.TerrainModule.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sceptre.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sceptre.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VRDebug.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VRDebug.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
@@ -46,10 +23,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="develop" />
+        <entry key="$PROJECT_DIR$/.." value="feature/burning_assets" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -68,16 +50,45 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/7e/1deccf29/Type.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/941a4719b50f41b29409612f3478c8db1a000/5f/190fd997/Rigidbody.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/42/431d96a9/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/69/7cdeeb5c/Resources.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/6b/a92a7d16/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/a6/7b7ed568/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8a406da998549af9a2680936c7da25a159c00/a7/9debc696/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/Assets/Resources/Models/HealthBar.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/Assets/Resources/Models/HighTarget.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/Assets/Resources/Models/Projectile.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/Assets/Resources/Models/Sceptre.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/Assets/Resources/Models/XR Origin.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/Assets/Scenes/Terrain.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/Assets/Scenes/Terrain.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/Assets/Scenes/Terrain.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/Assets/Scenes/Terrain.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/Assets/Scripts/Projectile.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/Assets/Scripts/Projectile.cs.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sceptre.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/Assets/Scripts/SpellSpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpellSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/Assets/Scripts/Target.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Target.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/Assets/Scripts/VRDebug.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/Assets/Scripts/VRDebug.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/Assets/Scripts/VRDebug.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/Assets/Scripts/VRDebug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.core-utils@2.2.0/Runtime/XROrigin.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.2/Runtime/Inputs/InputActionManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.2/Runtime/Interaction/Interactors/Visual/XRInteractorLineVisual.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.2/Runtime/Interaction/Interactors/XRRayInteractor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.3.2/Runtime/Interaction/XRInteractionEvents.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/ProjectSettings/EditorBuildSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Documents/Epitech/T-VIR/Shotass/Shotass/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -93,7 +104,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/targets&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -170,6 +181,7 @@
       <workItem from="1686919725857" duration="1424000" />
       <workItem from="1687522192271" duration="7988000" />
       <workItem from="1688028339596" duration="627000" />
+      <workItem from="1688654493057" duration="8067000" />
     </task>
     <task id="LOCAL-00001" summary="Create Prefabs, Add Interactions, scripts">
       <created>1686217180950</created>
@@ -185,7 +197,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686315335204</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Ajout de flammes lors de la collision de la boule de feu avec les cibles/terrain">
+      <created>1688654636882</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1688654636882</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fix prefabs after merge">
+      <created>1688719948900</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1688719948900</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,7 +225,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="feature/burning_assets" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -211,7 +249,10 @@
     <MESSAGE value="Rebuild terrain with proper prefabs" />
     <MESSAGE value="Allez ca ma saoulé" />
     <MESSAGE value="eho" />
-    <option name="LAST_COMMIT_MESSAGE" value="eho" />
+    <MESSAGE value="Ajouter un decors autour de la map" />
+    <MESSAGE value="Ajout de flammes lors de la collision de la boule de feu avec les cibles/terrain" />
+    <MESSAGE value="Fix prefabs after merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix prefabs after merge" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

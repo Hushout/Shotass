@@ -10,8 +10,6 @@ public class PlayRound : MonoBehaviour
 
     public GameObject meteor;
     
-    public int testCount = 1;
-    
     // Start is called before the first frame update
     void Start()
     {

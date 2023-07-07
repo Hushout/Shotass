@@ -72,7 +72,6 @@ public class Projectile: MonoBehaviour
                 Vector3 currentDirection = (currentPosition-previousPosition).normalized;
                 // Give projectile force to target
                 target.gameObject.GetComponent<Rigidbody>().AddForce(currentDirection * (float)_speed, ForceMode.Impulse);
-                VRDebug.Log("ezijfioze");
             }
         }
         else
