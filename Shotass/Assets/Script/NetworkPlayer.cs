@@ -7,10 +7,16 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class NetworkPlayer : NetworkBehaviour
 {
     // Start is called before the first frame update
-
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     public override void OnNetworkSpawn()
     {
-        DisableClientInput();
+        if (IsClient && !IsOwner)
+        {
+            DisableClientInput();
+        }
     }
 
     public void DisableClientInput()
@@ -35,5 +41,5 @@ public class NetworkPlayer : NetworkBehaviour
 
     }
 
-
+  
 }

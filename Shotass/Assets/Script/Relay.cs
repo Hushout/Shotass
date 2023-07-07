@@ -10,6 +10,7 @@ using Unity.Services.Core;
 using Unity.Services.Relay;
 using Unity.Services.Relay.Models;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Relay : MonoBehaviour
 {
@@ -31,7 +32,6 @@ public class Relay : MonoBehaviour
 
     public async Task<String> CreateRelay()
     {
-        Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa");
         try
         {
             Allocation allocation = await RelayService.Instance.CreateAllocationAsync(3);
@@ -39,9 +39,13 @@ public class Relay : MonoBehaviour
             Debug.Log("Join code " + joinCode);
 
             RelayServerData relayServerData = new RelayServerData(allocation, "dtls");
-            NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
 
-            NetworkManager.Singleton.StartHost();
+            SceneManager.LoadScene("SampleScene");
+            Debug.Log("LOAD SCENE");
+
+            NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
+            bool toto = NetworkManager.Singleton.StartHost();
+            Debug.Log("StartHost: "+toto);
 
             return joinCode;
 
@@ -78,12 +82,18 @@ public class Relay : MonoBehaviour
 
             RelayServerData relayServerData = new RelayServerData(joinAllocation, "dtls");
 
+            SceneManager.LoadScene("SampleScene");
+
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
             NetworkManager.Singleton.StartClient();
+
+
 
         }catch(System.Exception e)
         {
             Debug.Log("Join failed " + e.Message);
         }
     }
+
+
 }
