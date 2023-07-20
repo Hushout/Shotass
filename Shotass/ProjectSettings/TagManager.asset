@@ -7,6 +7,7 @@ TagManager:
   - MyGem
   - MySceptre
   - tagsarace
+  - MenuPlayer
   layers:
   - Default
   - TransparentFX

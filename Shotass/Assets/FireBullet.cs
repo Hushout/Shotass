@@ -44,6 +44,7 @@ public class FireBullet : MonoBehaviour
 
     private IEnumerator GrowBullet()
     {
+
         float elapsedTime = 0f;
         Vector3 initialScale = currentBullet.transform.localScale;
 
