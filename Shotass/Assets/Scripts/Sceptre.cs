@@ -20,13 +20,12 @@ public class Sceptre : Weapon
     [SerializeField]
     public float finaleBulletScale;
     
-    private float cd = 0f;
-    private bool isCharged = false;
-    private float maxCooldown = 5f;
+    private bool coldownExpired = true;
+    private float maxCooldown = 0.8f;
+    private Player _player = null;
 
     private GameObject currentBullet;
     private Coroutine chargeCoroutine;
-    private Coroutine cooldownCoroutine;
     
     
     void Start()
@@ -44,12 +43,18 @@ public class Sceptre : Weapon
         }
     }
 
+    public void AttachPlayer(Player player)
+    {
+        this._player = player;
+    }
+    
     public GameObject CreateProjectile()
     {
         var gameObj = Instantiate(_projectilePrefab, _projectileOrigin.position, _projectileOrigin.rotation);
         var projectile = gameObj.GetComponent<Projectile>();
         gameObj.transform.SetParent(this.transform);
         projectile.SetDamage(_damage);
+        projectile.SetPlayer(_player);
         return gameObj;
     }
 
@@ -72,57 +77,33 @@ public class Sceptre : Weapon
     
     public void Charge(ActivateEventArgs arg)
     {
-        if (cd == 0f) {
-            isCharged = true;
-            currentBullet = CreateProjectile();
-            chargeCoroutine = StartCoroutine(GrowBullet());
-        }
+        if (!coldownExpired) return;
+        currentBullet = CreateProjectile();
+        chargeCoroutine = StartCoroutine(GrowBullet());
+        // Start coldown
+        StartCoroutine(Cooldown());
     }
 
     public void Fire(DeactivateEventArgs arg)
     {
-        if (cd == 0f && isCharged) {
-            VRDebug.Log("IN if Fire");
-            cd = maxCooldown;
-            isCharged = false;
-            VRDebug.Log("calling cooldown");
-            cooldownCoroutine = StartCoroutine(coolDown());
-            if (chargeCoroutine != null)
-            {
-                StopCoroutine(chargeCoroutine);
-                chargeCoroutine = null;
-            }
-            StopCoroutine(cooldownCoroutine);
-            cooldownCoroutine = null;
-            currentBullet.GetComponent<Projectile>().SetDamage(_damage * (finaleBulletScale / 2.5));
-            currentBullet.transform.position = _projectileOrigin.position;
-            currentBullet.GetComponent<Rigidbody>().velocity = _projectileOrigin.up * fireSpeed;
-            // Move outside Sceptre parent 
-            currentBullet.transform.SetParent(null);
-            Destroy(currentBullet, 60);
-            currentBullet = null;
-        }
-    }
-
-    public IEnumerator coolDown() {
-        float elapsedTime = 0f;
-        VRDebug.Log($"In cooldown: {maxCooldown}, {cd}");
-        if (cd != maxCooldown)
-            yield return null;
-        
-        while (elapsedTime < maxCooldown && cd != 0f)
+        if (chargeCoroutine != null)
         {
-            VRDebug.Log("start loop");
-            VRDebug.Log($"Elapsed time: {elapsedTime}");
-            VRDebug.Log($"CD: {cd}");
-            VRDebug.Log($"is charged: {isCharged}");
-            float t = elapsedTime / maxCooldown;
-            cd = Mathf.Lerp(maxCooldown, 0f, t);
-
-
-            elapsedTime += Time.deltaTime;
-            yield return null;
+            StopCoroutine(chargeCoroutine);
+            chargeCoroutine = null;
         }
+        currentBullet.GetComponent<Projectile>().SetDamage(_damage * (finaleBulletScale / 2.5));
+        currentBullet.transform.position = _projectileOrigin.position;
+        currentBullet.GetComponent<Rigidbody>().velocity = _projectileOrigin.up * fireSpeed;
+        // Move outside Sceptre parent 
+        currentBullet.transform.SetParent(null);
+        Destroy(currentBullet, 60);
+        currentBullet = null;
     }
-
+    
+    private IEnumerator Cooldown()
+    {
+        coldownExpired = false;
+        yield return new WaitForSeconds(maxCooldown);
+        coldownExpired = true;
+    }
 }

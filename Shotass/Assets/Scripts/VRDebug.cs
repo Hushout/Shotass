@@ -51,9 +51,6 @@ public class VRDebug : MonoBehaviour
             _textOutputOutBounds = _textOutputGameObjectOutBounds.GetComponent<TextMeshProUGUI>();
             VRDebug._instance = this;
             InitController();
-            VRDebug.Log("[VRDebug]: Is XR controller Game Object null : " + (controllerGameObject == null ? "yes" : "no"));
-            VRDebug.Log("[VRDebug]: Is XR controller null : " + (controller == null ? "yes" : "no"));
-            VRDebug.Log("[VRDebug]: Started");
             NextDisplayMode();
             NextDisplayMode();
         } catch (Exception e)
@@ -65,7 +62,7 @@ public class VRDebug : MonoBehaviour
     public void InitController()
     {
         controller = controllerGameObject.GetComponent<ActionBasedController>();
-        controller.selectAction.action.performed += ctx => OnInputSelectPress();
+        controller.activateAction.action.performed += ctx => OnInputSelectPress();
     }
     
     public void OnInputSelectPress()
@@ -73,8 +70,9 @@ public class VRDebug : MonoBehaviour
         NextDisplayMode();
     }
 
-    public void DisplayLog(string text)
+    public void DisplayLog(string text, Color color)
     {
+        _textOutput.color = color;
         if (_textOutputGameObjectContainer.active)
         {
             _textOutput.text += text + "\n";
@@ -107,8 +105,6 @@ public class VRDebug : MonoBehaviour
             _instance._textOutputGameObjectContainer.SetActive(false);
             _instance._textOutputGameObjectOutBoundsContainer.SetActive(false);
         }
-
-        VRDebug.Log("[VRDebug] : " + _displayMode.ToString());
     }
 
     private void KeepTrackingBottom(TextMeshProUGUI textMeshPro)
@@ -140,12 +136,21 @@ public class VRDebug : MonoBehaviour
         Debug.Log(message);
         if (VRDebug._instance != null)
         {
-            VRDebug._instance.DisplayLog(message);
+            VRDebug._instance.DisplayLog(message, Color.green);
         }
     }
     
     static public void Log(float number)
     {
         VRDebug.Log(number.ToString());
+    }
+    
+    static public void LogWarning(string message)
+    {
+        Debug.LogWarning(message);
+        if (VRDebug._instance != null)
+        {
+            VRDebug._instance.DisplayLog(message, Color.red);
+        }
     }
 }

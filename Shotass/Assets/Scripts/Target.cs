@@ -48,6 +48,7 @@ public class Target : MonoBehaviour
     void Die()
     {
         Destroy(this.gameObject, 5);
+        Play.CheckGameOver();
         OnDie?.Invoke();
     }
 
