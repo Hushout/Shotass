@@ -50,12 +50,7 @@ public class VRDebug : MonoBehaviour
             _textOutput = _textOutputGameObject.GetComponent<TextMeshProUGUI>();
             _textOutputOutBounds = _textOutputGameObjectOutBounds.GetComponent<TextMeshProUGUI>();
             VRDebug._instance = this;
-            controller = controllerGameObject.GetComponent<ActionBasedController>(); 
-            
-            VRDebug.Log("[VRDebug]: Is XR controller Game Object null : " + (controllerGameObject == null ? "yes" : "no"));
-            VRDebug.Log("[VRDebug]: Is XR controller null : " + (controller == null ? "yes" : "no"));
-            VRDebug.Log("[VRDebug]: Started");
-            controller.selectAction.action.performed += ctx => OnInputSelectPress();
+            InitController();
             NextDisplayMode();
             NextDisplayMode();
         } catch (Exception e)
@@ -64,14 +59,20 @@ public class VRDebug : MonoBehaviour
         }
     }
 
+    public void InitController()
+    {
+        controller = controllerGameObject.GetComponent<ActionBasedController>();
+        controller.activateAction.action.performed += ctx => OnInputSelectPress();
+    }
+    
     public void OnInputSelectPress()
     {
-        VRDebug.Log("[VRDebug] : You pressed on Select action");
         NextDisplayMode();
     }
 
-    public void DisplayLog(string text)
+    public void DisplayLog(string text, Color color)
     {
+        _textOutput.color = color;
         if (_textOutputGameObjectContainer.active)
         {
             _textOutput.text += text + "\n";
@@ -104,17 +105,10 @@ public class VRDebug : MonoBehaviour
             _instance._textOutputGameObjectContainer.SetActive(false);
             _instance._textOutputGameObjectOutBoundsContainer.SetActive(false);
         }
-
-        VRDebug.Log("[VRDebug] : " + _displayMode.ToString());
     }
 
     private void KeepTrackingBottom(TextMeshProUGUI textMeshPro)
     {
-        //if(textMeshPro == _textOutput && _textOutputGameObjectContainer.active == false)
-        //    return;
-        //if(textMeshPro == _textOutputOutBounds && _textOutputGameObjectOutBoundsContainer.active == false)
-        //    return;
-        
         if (textMeshPro.overflowMode == TextOverflowModes.Overflow)
         {
             RectTransform rectTransform = textMeshPro.rectTransform;
@@ -126,16 +120,6 @@ public class VRDebug : MonoBehaviour
                 float overflowAmount = contentHeight - textHeight;
                 Vector3 currentPosition = rectTransform.localPosition;
                 Vector3 targetPosition;
-                //if (textMeshPro == _textOutput)
-                //{
-                //    targetPosition = new Vector3(currentPosition.x, overflowAmount, currentPosition.z);
-                //    rectTransform.localPosition = targetPosition;
-                //}
-                //else if (textMeshPro == _textOutputOutBounds)
-                //{
-                //    targetPosition = new Vector3(-overflowAmount, currentPosition.y, currentPosition.z);
-                //    rectTransform.localPosition = targetPosition;
-                //}
                 targetPosition = new Vector3(currentPosition.x, overflowAmount, currentPosition.z);
                 rectTransform.localPosition = targetPosition;
             }
@@ -152,12 +136,21 @@ public class VRDebug : MonoBehaviour
         Debug.Log(message);
         if (VRDebug._instance != null)
         {
-            VRDebug._instance.DisplayLog(message);
+            VRDebug._instance.DisplayLog(message, Color.green);
         }
     }
     
     static public void Log(float number)
     {
         VRDebug.Log(number.ToString());
+    }
+    
+    static public void LogWarning(string message)
+    {
+        Debug.LogWarning(message);
+        if (VRDebug._instance != null)
+        {
+            VRDebug._instance.DisplayLog(message, Color.red);
+        }
     }
 }

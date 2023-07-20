@@ -25,7 +25,7 @@ public class SpellSpawner : MonoBehaviour
     {
         var projectileGameObject = Instantiate(_projectilePrefab, spawnObject.transform.position, Quaternion.identity);
         var projectile = projectileGameObject.GetComponent<Projectile>();
-        projectile.SetDamage(100f);
+        projectile.SetDamage(20f);
         projectile.Launch(spawnObject.transform);
         
     }
