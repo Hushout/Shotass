@@ -17,7 +17,13 @@ public class Sceptre : Weapon
     public float chargeDuration = 2f;
     [SerializeField]
     public float maxBulletScale = 2f;
+    [SerializeField]
+    public float finaleBulletScale;
     
+    private bool coldownExpired = true;
+    private float maxCooldown = 0.8f;
+    private Player _player = null;
+
     private GameObject currentBullet;
     private Coroutine chargeCoroutine;
     
@@ -37,12 +43,18 @@ public class Sceptre : Weapon
         }
     }
 
+    public void AttachPlayer(Player player)
+    {
+        this._player = player;
+    }
+    
     public GameObject CreateProjectile()
     {
         var gameObj = Instantiate(_projectilePrefab, _projectileOrigin.position, _projectileOrigin.rotation);
         var projectile = gameObj.GetComponent<Projectile>();
         gameObj.transform.SetParent(this.transform);
         projectile.SetDamage(_damage);
+        projectile.SetPlayer(_player);
         return gameObj;
     }
 
@@ -56,6 +68,7 @@ public class Sceptre : Weapon
             float t = elapsedTime / chargeDuration;
             float scale = Mathf.Lerp(1f, maxBulletScale, t);
             currentBullet.transform.localScale = initialScale * scale;
+            finaleBulletScale = scale;
 
             elapsedTime += Time.deltaTime;
             yield return null;
@@ -64,10 +77,13 @@ public class Sceptre : Weapon
     
     public void Charge(ActivateEventArgs arg)
     {
+        if (!coldownExpired) return;
         currentBullet = CreateProjectile();
         chargeCoroutine = StartCoroutine(GrowBullet());
+        // Start coldown
+        StartCoroutine(Cooldown());
     }
-    
+
     public void Fire(DeactivateEventArgs arg)
     {
         if (chargeCoroutine != null)
@@ -75,6 +91,7 @@ public class Sceptre : Weapon
             StopCoroutine(chargeCoroutine);
             chargeCoroutine = null;
         }
+        currentBullet.GetComponent<Projectile>().SetDamage(_damage * (finaleBulletScale / 2.5));
         currentBullet.transform.position = _projectileOrigin.position;
         currentBullet.GetComponent<Rigidbody>().velocity = _projectileOrigin.up * fireSpeed;
         // Move outside Sceptre parent 
@@ -82,5 +99,11 @@ public class Sceptre : Weapon
         Destroy(currentBullet, 60);
         currentBullet = null;
     }
-
+    
+    private IEnumerator Cooldown()
+    {
+        coldownExpired = false;
+        yield return new WaitForSeconds(maxCooldown);
+        coldownExpired = true;
+    }
 }
