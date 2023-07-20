@@ -64,23 +64,78 @@ public class Sceptre : Weapon
     
     public void Charge(ActivateEventArgs arg)
     {
-        currentBullet = CreateProjectile();
-        chargeCoroutine = StartCoroutine(GrowBullet());
+            currentBullet = CreateProjectile();
+            chargeCoroutine = StartCoroutine(GrowBullet());
     }
     
     public void Fire(DeactivateEventArgs arg)
     {
-        if (chargeCoroutine != null)
-        {
-            StopCoroutine(chargeCoroutine);
-            chargeCoroutine = null;
-        }
-        currentBullet.transform.position = _projectileOrigin.position;
-        currentBullet.GetComponent<Rigidbody>().velocity = _projectileOrigin.up * fireSpeed;
-        // Move outside Sceptre parent 
-        currentBullet.transform.SetParent(null);
-        Destroy(currentBullet, 60);
-        currentBullet = null;
+            getAllchildren();
+            if (chargeCoroutine != null)
+            {
+                StopCoroutine(chargeCoroutine);
+                chargeCoroutine = null;
+            }
+            currentBullet.transform.position = _projectileOrigin.position;
+            currentBullet.GetComponent<Rigidbody>().velocity = _projectileOrigin.up * fireSpeed;
+            // Move outside Sceptre parent 
+            currentBullet.transform.SetParent(null);
+            Destroy(currentBullet, 60);
+            currentBullet = null;
     }
 
+    public void crystalOn()
+    {
+    }
+
+    public void crystalOff()
+    {
+    }
+
+    public void hoverEntered(HoverEnterEventArgs arg)
+    {
+        crystalOn();
+    }
+
+    public void hoverExit(HoverExitEventArgs arg)
+    {
+        crystalOff();
+    }
+
+    public void getAllchildren()
+    {
+        Transform[] children = GetChildren(transform);
+
+        // Parcourir tous les enfants et les afficher
+        foreach (Transform child in children)
+        {
+            if(child.name == "slot")
+            {
+                Transform[] childSlot = GetChildren(child);
+                foreach(Transform subChild in childSlot)
+                {
+                    if (subChild.name == "attach")
+                    {
+                        Transform[] childattach = GetChildren(subChild);
+                        foreach (Transform subattach in childattach)
+                        {
+                            VRDebug.Log(subattach.name);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private Transform[] GetChildren(Transform parent)
+    {
+        Transform[] children = new Transform[parent.childCount];
+
+        for (int i = 0; i < parent.childCount; i++)
+        {
+            children[i] = parent.GetChild(i);
+        }
+
+        return children;
+    }
 }
