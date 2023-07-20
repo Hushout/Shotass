@@ -83,9 +83,10 @@ public class Sceptre : Weapon
         // Start coldown
         StartCoroutine(Cooldown());
     }
-
+    
     public void Fire(DeactivateEventArgs arg)
     {
+        getAllchildren();
         if (chargeCoroutine != null)
         {
             StopCoroutine(chargeCoroutine);
@@ -105,5 +106,60 @@ public class Sceptre : Weapon
         coldownExpired = false;
         yield return new WaitForSeconds(maxCooldown);
         coldownExpired = true;
+    }
+
+    public void crystalOn()
+    {
+    }
+
+    public void crystalOff()
+    {
+    }
+
+    public void hoverEntered(HoverEnterEventArgs arg)
+    {
+        crystalOn();
+    }
+
+    public void hoverExit(HoverExitEventArgs arg)
+    {
+        crystalOff();
+    }
+
+    public void getAllchildren()
+    {
+        Transform[] children = GetChildren(transform);
+
+        // Parcourir tous les enfants et les afficher
+        foreach (Transform child in children)
+        {
+            if(child.name == "slot")
+            {
+                Transform[] childSlot = GetChildren(child);
+                foreach(Transform subChild in childSlot)
+                {
+                    if (subChild.name == "attach")
+                    {
+                        Transform[] childattach = GetChildren(subChild);
+                        foreach (Transform subattach in childattach)
+                        {
+                            VRDebug.Log(subattach.name);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private Transform[] GetChildren(Transform parent)
+    {
+        Transform[] children = new Transform[parent.childCount];
+
+        for (int i = 0; i < parent.childCount; i++)
+        {
+            children[i] = parent.GetChild(i);
+        }
+
+        return children;
     }
 }
